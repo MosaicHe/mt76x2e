@@ -1990,7 +1990,7 @@ VOID APMlmeDynamicTxRateSwitchingAdapt(RTMP_ADAPTER *pAd, UINT i)
 
 
 	/* Handle low traffic case */
-	if (TxTotalCnt <= 15)
+	if (TxTotalCnt <= 3)
 	{
 		pEntry->lowTrafficCount++;
 		if (pEntry->lowTrafficCount >= pAd->CommonCfg.lowTrafficThrd)
@@ -2079,7 +2079,7 @@ VOID APMlmeDynamicTxRateSwitchingAdapt(RTMP_ADAPTER *pAd, UINT i)
 		return;
 	}
 
-    if(TxTotalCnt > 100)
+    if(TxTotalCnt > 30)
 	pEntry->lowTrafficCount = 0;
 
 	/*

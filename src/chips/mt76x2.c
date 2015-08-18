@@ -3518,8 +3518,8 @@ void mt76x2_get_current_temp(RTMP_ADAPTER *ad)
 	else
 	        pChipCap->current_temp = 25;
 
-	DBGPRINT(RT_DEBUG_TRACE, ("%s::read_temp=%d (0x%x), current_temp=%d (0x%x)\n", 
-		__FUNCTION__, temp_val, temp_val, pChipCap->current_temp, pChipCap->current_temp));
+	//DBGPRINT(RT_DEBUG_TRACE, ("%s::read_temp=%d (0x%x), current_temp=%d (0x%x)\n", 
+	//	__FUNCTION__, temp_val, temp_val, pChipCap->current_temp, pChipCap->current_temp));
 }
 
 void mt76x2_read_temp_info_from_eeprom(RTMP_ADAPTER *ad)
