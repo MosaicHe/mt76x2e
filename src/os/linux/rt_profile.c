@@ -28,8 +28,8 @@
 
 #if defined(CONFIG_RA_HW_NAT) || defined(CONFIG_RA_HW_NAT_MODULE)
 #if defined(CONFIG_SUPPORT_OPENWRT)
-#include "../../../linux-kernel/net/nat/hw_nat/ra_nat.h"
-#include "../../../linux-kernel/net/nat/hw_nat/frame_engine.h"
+#include <net/nat/hw_nat/ra_nat.h>
+#include <net/nat/hw_nat/frame_engine.h>
 #else
 #include "../../../../../../net/nat/hw_nat/ra_nat.h"
 #include "../../../../../../net/nat/hw_nat/frame_engine.h"
