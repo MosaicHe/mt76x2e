@@ -1838,6 +1838,7 @@ void mt76x2_get_external_lna_gain(RTMP_ADAPTER *ad)
 
 void mt76x2_get_agc_gain(RTMP_ADAPTER *ad, BOOLEAN init_phase)
 {
+#ifdef DYNAMIC_VGA_SUPPORT
 	UCHAR val;
 	USHORT val16;
 	UINT32 bbp_val;
@@ -1870,6 +1871,7 @@ void mt76x2_get_agc_gain(RTMP_ADAPTER *ad, BOOLEAN init_phase)
 	}
 
 	ad->CommonCfg.lna_vga_ctl.bDyncVgaEnable = TRUE;
+#endif /* DYNAMIC_VGA_SUPPORT */
 }
 
 int mt76x2_reinit_agc_gain(RTMP_ADAPTER *ad, u8 channel)
